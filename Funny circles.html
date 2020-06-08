@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Circle</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"
+></canvas>
+<script>
+    //VE hinh tron don gian voi kich thuoc co dinh
+    // class Arc {
+    //     constructor(x, y, radius) {
+    //         this.x = x;
+    //         this.y = y;
+    //         this.radius = radius;
+    //     }
+    // }
+    //
+    // function createCircle() {
+    //     let ctx = document.getElementById("myCanvas").getContext("2d");
+    //     let circle = new Arc(200, 200, 80);
+    //     ctx.beginPath();
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    //     ctx.fill();
+    // }
+    //
+    // createCircle();
+    // ve hinh tron voi ban kinh ngau nhien
+    // function Circle(x, y, radius) {
+    //      this.x = x;
+    //      this.y = y;
+    //      this.radius = radius;
+    // }
+    // function createCircle() {
+    //      let ctx = document.getElementById("myCanvas").getContext("2d");
+    //      let radius = Math.floor(Math.random() * 80);
+    //      let circle= new Circle(500, 500, radius);
+    //      ctx.beginPath();
+    //      ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    //      ctx.fill();
+    // }
+    // createCircle();
+
+    //Ve hinh tron voi mau ngau nhien:
+    // class Arc{
+    //     constructor(x, y, radius) {
+    //         this.x = x;
+    //         this.y = y;
+    //         this.radius = radius;
+    //     }
+    // }
+    // function getRandomHex(){
+    //     return Math.floor(Math.random()*255);
+    // }
+    // function getRandomColor() {
+    //     let red = getRandomHex();
+    //     let green = getRandomHex();
+    //     let blue = getRandomHex();
+    //           return "rgb("+red + "," + blue + "," + green +")";
+    // }
+    // function createCircle(){
+    //     let ctx = document.getElementById("myCanvas").getContext("2d");
+    //     let radius = Math.floor(Math.random() * 80);
+    //     let color = getRandomColor();
+    //     let circle= new Arc(500, 500, radius);
+    //     ctx.beginPath();
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    //     ctx.fillStyle = color;
+    //     ctx.fill();
+    // }
+    // createCircle();
+// VE DUOC HINH TRON VOI VI TRI NGAU NHIEN
+   // class Arc{
+   //     constructor(x, y, radius) {
+   //         this.x = x;
+   //         this.y = y;
+   //         this.radius = radius;
+   //     }
+   // }
+   // function getRandomHex() {
+   //      return Math.floor(Math.random()*255);
+   // }
+   // function getRandomColor() {
+   //      let red = getRandomHex();
+   //      let  green = getRandomHex();
+   //      let blue = getRandomHex();
+   //        return "rgb("+ red + "," + blue + "," + green +")";
+   // }
+   // function createCircle() {
+   //      let ctx = document.getElementById("myCanvas").getContext("2d");
+   //      let radius = Math.floor(Math.random() *80);
+   //      let color = getRandomColor();
+   //      let x = Math.random() * window.innerWidth;
+   //      let y = Math.random() * window.innerHeight;
+   //      let circle= new Arc(x, y, radius);
+   //      ctx. beginPath();
+   //      ctx. arc(circle.x , circle.y , circle.radius, 0 ,2 *Math.PI);
+   //      ctx. fillStyle = color;
+   //      ctx.fill();
+   // }
+   // createCircle();
+
+
+    //VE DUOC 2 HÌNH TRON
+    // class Arc{
+    //     constructor(x, y, radius) {
+    //         this.x = x;
+    //         this.x = x;
+    //         this.y = y;
+    //         this.radius = radius;
+    //     }
+    // }
+    // function getRandomHex(){
+    //     return Math.floor(Math.random()*255);
+    // }
+    //
+    // function getRandomColor(){
+    //     var red = getRandomHex();
+    //     var green = getRandomHex();
+    //     var blue = getRandomHex();
+    //     return "rgb(" + red + "," + blue + "," + green +")";
+    // }
+    //
+    // function createCircle(){
+    //     var ctx = document.getElementById("myCanvas").getContext("2d");
+    //     var radius = Math.floor(Math.random() * 80);
+    //     var color = getRandomColor();
+    //     var x = Math.random() * window.innerWidth;
+    //     var y = Math.random() * window.innerHeight;
+    //     var circle= new Arc(x, y, radius);
+    //     ctx.beginPath();
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    //     ctx.fillStyle = color;
+    //     ctx.fill();
+    // }
+    //
+    // createCircle();
+    // createCircle();
+
+    //TAO DC RAT NHIEU HINH TRON
+    class Arc{
+            constructor(x, y, radius) {
+                this.x = x;
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+            }
+        }
+
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);
+    }
+
+    function getRandomColor(){
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+
+    function createCircle(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var color = getRandomColor();
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var circle= new Arc(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+
+    function createMultipleCircle(){
+        for(var i = 0; i < 30; i++){
+            createCircle();
+        }
+    }
+
+    createMultipleCircle();
+</script>
+</body>
+</html>
