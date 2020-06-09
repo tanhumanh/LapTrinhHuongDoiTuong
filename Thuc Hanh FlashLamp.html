@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="off.jpg" style="width: 200px;height: 200px" id="flashLamp">
+<button onclick="denPin.turnOn()">On</button>
+<button onclick="denPin.turnOff()">Off</button>
+<script>
+    class Battery{
+        constructor() {
+            this.energy = 10;
+        }
+        setEnergy(value){
+            this.energy = value;
+        }
+        getEnergy(){
+            return this.energy;//vi co get nen phai return lay ra
+        }
+        decreaseEnergy(){
+            this.energy--;
+        }
+    }
+    class FlashLamp{
+        constructor(battery) {
+            this.status = false ;
+            this.battery = battery;
+        }
+        setBattery(battery){
+            this.battery = battery;
+        }
+        getBatteryInfo(){
+            return this.battery.getEnergy();
+        }
+        light(){
+            (this.status)?console.log("Turn On"): console.log("Turn Off");
+            if (this.status){
+                document.getElementById("flashLamp").src ="on.png";
+            }else {
+                document.getElementById("flashLamp").src = "off.jpg";
+            }
+        }
+        turnOn(){
+            this.status = true;
+            if (this.battery.getEnergy()>0){
+                this.battery.decreaseEnergy();
+                this.light();
+            }else {
+                alert("Het pin roi");
+            }
+
+        }
+        turnOff(){
+            this.status = false;
+            this.light();
+        }
+    }
+    let pin = new Battery();
+
+    let denPin = new FlashLamp();
+    denPin.setBattery(pin);
+    console.log(denPin.getBatteryInfo());
+    denPin.turnOn();
+    console.log(denPin.getBatteryInfo());
+</script>
+</body>
+</html>
