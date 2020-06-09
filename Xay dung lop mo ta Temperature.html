@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>temperature</title>
 </head>
 <body>
-$END$
+<script>
+    //Khai báo lớp Temperature với các thuộc tính cần thiết
+    class TemperatureC{
+        constructor(number) {
+            this.number = number;
+        }
+        //Khai báo các phương thức chuyển đổi nhiệt độ
+        changToF(){
+            let F  = this.number * 1.8 + 32;
+            return F;
+        }
+        changToK(){
+            let K = 273 *this.number;
+            return K;
+        }
+    }
+    //Tạo đối tượng và thực hiện các bước theo kịch bản
+    let temperatureC = new TemperatureC(25);
+    console.log(temperatureC.changToF());
+    console.log(temperatureC.changToK());
+</script>
+
 </body>
 </html>
